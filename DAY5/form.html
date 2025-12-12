@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Simple form</title>
+</head>
+<body>
+    <h1>Form and validation</h1>
+    <form id="fid1">
+
+    <label>User ID:</label><br>
+    <input id="name" type="text" placeholder="Enter your name"><br><br>
+
+    <label>Password:</label><br>
+    <input type="password" placeholder="Enter your password"><br><br>
+
+    <button type="submit">Submit</button><br><br>
+    <p id = "eid1" style="color:rgb(255, 0, 0);"></p>
+
+
+</form>
+
+
+    <script>
+
+            var id = document.getElementById("fid1").addEventListener('submit',function(event){
+
+                event.preventDefault() //it will stop reloading the page
+                let a = document.getElementById('name')
+                let error = document.getElementById('eid1')
+
+                if(a.value == ''){
+                    error.innerHTML = "User ID cannot be empty"
+                }
+
+
+
+            });
+
+    </script>
+</body>
+</html>

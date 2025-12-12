@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Example of DOM with JS</title>
+</head>
+<body>
+    <h1 id ="hid">This is first heading</h1>
+    <h2 id ="hid2">This is second heading</h2>
+    <button onclick="func()">Click</button>
+    <button onclick="func2()">Click</button>
+    <button id="bid1">change 1st</button>
+    <button id="bid2">change 2nd</button>
+    <button id="bid3">change bg </button>
+<button id="bid4">change color</button>
+
+<script>
+
+        document.getElementById("bid4").addEventListener("click",function(){
+
+        document.body.style.backgroundColor = "purple";
+
+    })
+
+
+    document.getElementById("bid1").addEventListener("click",function(){
+
+        document.getElementById("hid").innerHTML = "value by click event 1st only";
+
+    })
+
+    document.getElementById("bid2").addEventListener("click",function(){
+
+        document.getElementById("hid").innerHTML = "value by click event";
+        document.getElementById("hid2").innerHTML = "value by click event";
+
+    })
+
+    document.getElementById("bid3").addEventListener("click",function(){
+
+        document.getElementById("hid").style.color = "red";
+
+    })
+
+    function func(){
+    document.getElementById("hid").innerHTML = "Heading 1 changed by JS";
+    }
+    function func2(){
+    document.getElementById("hid2").innerHTML = "Heading 2 changed by JS";
+    }
+</script>
+
+</body>
+</html>
