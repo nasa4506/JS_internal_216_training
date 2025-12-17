@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCL Assessment Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>HCL assessment</h1>
+
+    <div class="nav">
+        <div>HOME</div>
+        <div>Gallery</div>
+        <div>Services</div>
+        <div>About Us</div>
+        <div>Contact</div>
+    </div>
+
+    <div class="container">
+        <div class="column column-left">
+            <h3>Latest Updates</h3>
+            <p>Welcome to our new platform. We are dedicated to providing the best service possible.</p>
+            <p>Check out our latest features added this month:</p>
+            <ul>
+                <li>Enhanced security</li>
+                <li>Faster load times</li>
+                <li>Mobile optimized interface</li>
+            </ul>
+            <p>Stay tuned for more updates coming soon!</p>
+        </div>
+
+        <div class="column column-center">
+            <h3>Important Notices</h3>
+            <div class="marquee-container">
+                <marquee direction="up" height="90%" onmouseover="stop();" onmouseout="start();" scrollamount="3">
+                    <div style="text-align: center; line-height: 2;">
+                        <strong>Notice 1:</strong> System maintenance scheduled for Sunday.<br>
+                        <strong>Notice 2:</strong> New policy updates are now in effect.<br>
+                        <strong>Notice 3:</strong> Quarterly results are available.<br>
+                        <strong>Notice 4:</strong> Congratulations to the team for the award!<br>
+                        <strong>Notice 5:</strong> Holiday schedule released.<br>
+                        <strong>Notice 6:</strong> Please update your profile information.<br>
+                        <strong>Notice 7:</strong> Security training deadline approaching.<br>
+                        <strong>Notice 8:</strong> Welcome new team members!<br>
+                    </div>
+                </marquee>
+            </div>
+        </div>
+
+        <div class="column column-right">
+            <h3>Student Registration</h3>
+            <form id="regForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter your name">
+                    <div id="nameError" class="error-msg">Name should not be empty</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                    <div id="emailError" class="error-msg">Please enter a valid email</div>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div class="radio-group">
+                        <input type="radio" id="male" name="gender" value="Male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="Female">
+                        <label for="female">Female</label>
+                    </div>
+                    <div id="genderError" class="error-msg">Please select a gender</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Course</label>
+                    <select id="course">
+                        <option value="">-- Select Course --</option>
+                        <option value="Java">Java</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="DotNet">.NET</option>
+                        <option value="Python">Python</option>
+                    </select>
+                    <div id="courseError" class="error-msg">Please select a course</div>
+                </div>
+
+                <div class="form-group terms-group">
+                    <input type="checkbox" id="terms">
+                    <label for="terms" style="display:inline;">I accept Terms & Conditions</label>
+                    <div id="termsError" class="error-msg">You must accept the terms</div>
+                </div>
+
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+
+            <div id="displayData">
+                <!-- Data will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
