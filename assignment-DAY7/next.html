@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Next Page</title>
+</head>
+<body>
+    <h1 id="h11">This is a Registration Page</h1>
+
+    <script>
+        let params=new URLSearchParams(window.location.search); 
+        //  <!-- Creating stream--Jis window se aaye the usska reference lelega-->
+        let na=params.get("first-name");
+        
+        document.getElementById("h11").innerHTML=`Welcome ! ${na}`;
+
+        
+
+
+        let pswd = params.get("password-here");
+
+        let heading = document.createElement("h2");
+        heading.textContent = `Your password is: ${pswd}`;
+
+        // pswd will give null because-Many browsers do not include <input type="password"> values in the URL when using GET method for security reasons.
+
+        document.body.appendChild(heading);
+
+        
+    </script>
+
+</body>
+</html>
